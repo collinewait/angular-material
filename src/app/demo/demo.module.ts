@@ -6,9 +6,10 @@ import { FormsModule } from '@angular/forms';
 
 import { DemoRoutingModule } from './demo-routing.module';
 import { ButtonsComponent } from './buttons/buttons.component';
+import { FlexboxComponent } from './flexbox/flexbox.component';
 
 @NgModule({
-  declarations: [ButtonsComponent],
+  declarations: [ButtonsComponent, FlexboxComponent],
   imports: [
     CommonModule,
     DemoRoutingModule,
