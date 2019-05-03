@@ -1,3 +1,4 @@
+import { Output, EventEmitter } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
+  @Output() toggleSidenav = new EventEmitter<void>();
   constructor() { }
 
   ngOnInit() {
