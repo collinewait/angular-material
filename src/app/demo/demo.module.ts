@@ -15,7 +15,7 @@ import { FlexboxComponent } from './flexbox/flexbox.component';
     CommonModule,
     DemoRoutingModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
     FormsModule
   ]
 })
