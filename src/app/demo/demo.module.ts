@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { MaterialModule } from '../shared/material.module';
+import { FormsModule } from '@angular/forms';
+
 import { DemoRoutingModule } from './demo-routing.module';
 import { ButtonsComponent } from './buttons/buttons.component';
 
@@ -8,7 +11,9 @@ import { ButtonsComponent } from './buttons/buttons.component';
   declarations: [ButtonsComponent],
   imports: [
     CommonModule,
-    DemoRoutingModule
+    DemoRoutingModule,
+    MaterialModule,
+    FormsModule
   ]
 })
 export class DemoModule { }
