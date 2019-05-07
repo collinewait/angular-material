@@ -13,7 +13,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { UserService } from './services/user.service';
 import { HttpClientModule } from '@angular/common/http';
 import { NotesComponent } from '../contactsmanager/components/notes/notes.component';
-import { NewContactDialogComponent } from './component/new-contact-dialog/new-contact-dialog.component';
+import { NewContactDialogComponent } from './components/new-contact-dialog/new-contact-dialog.component';
 
 const routes: Routes = [
   { path: '', component: ContactmanagerAppComponent,
