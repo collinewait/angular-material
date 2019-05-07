@@ -1,4 +1,5 @@
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <ng-container matColumnDef="position">
       <th mat-header-cell *matHeaderCellDef> No. </th>
@@ -19,8 +20,5 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 
-
-
-  <!-- Copyright 2019 Google Inc. All Rights Reserved.
-      Use of this source code is governed by an MIT-style license that
-      can be found in the LICENSE file at http://angular.io/license -->
+  <mat-paginator #paginator [pageSize]="2" [pageSizeOptions]="[2, 5, 10, 20]"></mat-paginator>
+</div>
