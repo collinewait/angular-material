@@ -22,6 +22,7 @@ export class SidenavComponent implements OnInit {
   //     zone.run(() => this.mediaMatcher = mql));
   // }
   users: Observable<User[]>;
+  isDarkTheme = false;
 
   constructor(
     private userServive: UserService,
@@ -42,5 +43,9 @@ export class SidenavComponent implements OnInit {
 
   isScreenSmall(): boolean {
     return this.mediaMatcher.matches;
+  }
+
+  toggleTheme() {
+    this.isDarkTheme = !this.isDarkTheme;
   }
 }

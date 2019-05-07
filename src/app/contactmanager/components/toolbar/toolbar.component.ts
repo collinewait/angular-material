@@ -14,6 +14,8 @@ import { MatSnackBarRef } from '@angular/material';
 export class ToolbarComponent implements OnInit {
 
   @Output() toggleSidenav = new EventEmitter<void>();
+  @Output() toggleTheme = new EventEmitter<void>();
+
   constructor(
     private dialog: MatDialog,
     private snackBar: MatSnackBar,
