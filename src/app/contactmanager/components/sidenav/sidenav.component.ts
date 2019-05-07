@@ -1,4 +1,7 @@
+import { UserService } from '../../services/user.service';
 import { Component, OnInit, NgZone } from '@angular/core';
+import { Observable } from 'rxjs/internal/Observable';
+import { User } from '../../model/user';
 
 const SMALL_WIDTH_BREAKPOINT = 720;
 @Component({
@@ -16,10 +19,16 @@ export class SidenavComponent implements OnInit {
   //   this.mediaMatcher.addListener(mql =>
   //     zone.run(() => this.mediaMatcher = mql));
   // }
+  private users: Observable<User[]>;
 
-  constructor() { }
+  constructor(private userServive: UserService) { }
 
   ngOnInit() {
+    this.users = this.userServive.users;
+    this.userServive.loadAll();
+    this.users.subscribe(data => {
+      console.log(data);
+    });
   }
 
   isScreenSmall(): boolean {
