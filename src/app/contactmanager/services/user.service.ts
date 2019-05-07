@@ -22,7 +22,6 @@ export class UserService {
   }
 
   userById(id: number) {
-    console.log('user id>>', id);
     return this.dataStore.users.find(x => x.id === id);
   }
 

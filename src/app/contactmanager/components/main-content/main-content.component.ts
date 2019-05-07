@@ -29,7 +29,6 @@ export class MainContentComponent implements OnInit {
         } else {
           setTimeout(() => { // delayed to show spinner just for demo purposes.
             this.user = this.userService.userById(id);
-            console.log('USER', this.user);
           }, 500);
         }
       });
