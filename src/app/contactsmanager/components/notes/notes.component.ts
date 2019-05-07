@@ -24,7 +24,6 @@ export class NotesComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.dataSource = new MatTableDataSource<Note >(this.notes);
-    console.log('Notes', typeof(this.notes[0].id));
   }
 
 
