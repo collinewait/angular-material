@@ -18,10 +18,21 @@ export class MainContentComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      const id = +params['id'];
-      console.log('iddd??', id);
-      this.user = this.userService.userById(id);
-      console.log('user clicked', this.user);
+      let id = +params['id'];
+      if (!id) {
+        id = 1;
+      }
+      this.user = null;
+      this.userService.users.subscribe(users => {
+        if (users.length === 0) {
+          return;
+        } else {
+          setTimeout(() => { // delayed to show spinner just for demo purposes.
+            this.user = this.userService.userById(id);
+            console.log('USER', this.user);
+          }, 500);
+        }
+      });
     });
   }
 
