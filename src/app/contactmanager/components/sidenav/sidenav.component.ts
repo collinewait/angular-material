@@ -19,7 +19,7 @@ export class SidenavComponent implements OnInit {
   //   this.mediaMatcher.addListener(mql =>
   //     zone.run(() => this.mediaMatcher = mql));
   // }
-  private users: Observable<User[]>;
+  users: Observable<User[]>;
 
   constructor(private userServive: UserService) { }
 
