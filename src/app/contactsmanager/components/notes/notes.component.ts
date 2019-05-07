@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, AfterViewInit } from '@angular/core';
 import { Note } from 'src/app/contactmanager/model/note';
 import { MatTableDataSource, MatPaginator } from '@angular/material';
 
@@ -7,7 +7,7 @@ import { MatTableDataSource, MatPaginator } from '@angular/material';
   templateUrl: './notes.component.html',
   styleUrls: ['./notes.component.scss']
 })
-export class NotesComponent implements OnInit {
+export class NotesComponent implements OnInit, AfterViewInit {
 @Input() notes: Note[];
 
   displayedColumns: string[] = ['position', 'title', 'date'];
