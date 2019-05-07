@@ -23,6 +23,7 @@ export class SidenavComponent implements OnInit {
   // }
   users: Observable<User[]>;
   isDarkTheme = false;
+  dir = 'ltr';
 
   constructor(
     private userServive: UserService,
@@ -47,5 +48,10 @@ export class SidenavComponent implements OnInit {
 
   toggleTheme() {
     this.isDarkTheme = !this.isDarkTheme;
+  }
+
+  toggleDir() {
+    this.dir = this.dir == 'ltr' ? 'rtl' : 'ltr';
+    // this.sidenav.toggle().then(() => this.sidenav.toggle());
   }
 }

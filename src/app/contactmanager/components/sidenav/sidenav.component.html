@@ -1,6 +1,7 @@
 <mat-sidenav-container
                       class="app-sidenav-container"
                       [class.dark-theme]="isDarkTheme"
+                      [dir]="dir"
   autosize>
   <mat-sidenav #sidenav class="app-sidenav mat-elevation-z10"
                 [opened]="!isScreenSmall()"
@@ -19,6 +20,7 @@
     <app-toolbar
       (toggleSidenav)="sidenav.toggle()"
       (toggleTheme) ="toggleTheme()"
+      (toggleDir) ="toggleDir()"
       >
     </app-toolbar>
     <div class="wrapper">
